@@ -41,14 +41,16 @@ public class MainActivity extends AppCompatActivity {
         btnWeb.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.com"));
+                startActivity(intent);
             }
         });
 
         btnMap.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("geo:0,0?q=Lucknow"));
+                startActivity(intent);
             }
         });
     }
