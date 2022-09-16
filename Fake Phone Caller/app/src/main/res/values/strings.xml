@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">FakePhoneCall</string>
+    <string name="numberInput">Enter the Phone Number</string>
+</resources>
