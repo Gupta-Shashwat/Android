@@ -1,14 +1,16 @@
 package com.thehtmlprogrammer.contactsmanager;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,13 +22,12 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Log.d("in onCreate", "main activity created");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        contact1 = findViewById(R.id.contact1);
+        contact1.setVisibility(View.GONE);
         btnNewContact = findViewById(R.id.btnNewContact);
-        ivPhoneContact1.setImageResource(R.drawable.phone);
-        ivEmailContact1.setImageResource(R.drawable.email);
-        ivLocContact1.setImageResource(R.drawable.location);
 
         btnNewContact.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -38,11 +39,40 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+    protected void onStart() {
+        super.onStart();
+        Log.d("in onStart", "Started Activity");
+    }
 
-        if (requestCode == intentCode) {
-            if (resultCode == RESULT_OK) {
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("in onResume", "Resuming Activity");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("in onDestroy", "Activity Destroyed");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("in onStop", "Activity Stopped");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("in onRestart", "Activity Restarted");
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {
+            if (data != null) {
                 int x = data.getIntExtra("photo", 0);
                 switch (x) {
                     case 0:
@@ -58,8 +88,11 @@ public class MainActivity extends AppCompatActivity {
                 tvPhoneContact1.setText(Integer.parseInt(data.getStringExtra("phone")));
                 tvEmailContact1.setText(data.getStringExtra("email"));
                 tvLocContact1.setText(data.getStringExtra("address"));
-                contact1.setVisibility(View.VISIBLE);
             }
+            ivPhoneContact1.setImageResource(R.drawable.phone);
+            ivEmailContact1.setImageResource(R.drawable.email);
+            ivLocContact1.setImageResource(R.drawable.location);
+            contact1.setVisibility(View.VISIBLE);
         }
     }
 }

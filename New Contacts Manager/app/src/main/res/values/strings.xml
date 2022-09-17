@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">New Contacts Manager</string>
+    <string name="title">CONTACTS MANAGER</string>
+    <string name="contact_1_profile_photo">Contact 1 Profile Photo</string>
+    <string name="tvDefault">TextView</string>
+    <string name="phone">Phone</string>
+    <string name="Website">WebPage</string>
+    <string name="ivLocation">Location</string>
+    <string name="btn_new_contact">CREATE NEW CONTACT</string>
+    <string name="new_contact_name_hint">Enter Contact\'s Name</string>
+    <string name="new_contact_phone_hint">Enter Contact\'s Phone Number</string>
+    <string name="new_contact_website_hint">Enter Contact\'s Website</string>
+    <string name="new_contact_address_hint">Enter Contact\'s Address</string>
+    <string name="satisfied">satisfied</string>
+    <string name="neutral">neutral</string>
+    <string name="dissatisfied">dissatisfied</string>
+</resources>
