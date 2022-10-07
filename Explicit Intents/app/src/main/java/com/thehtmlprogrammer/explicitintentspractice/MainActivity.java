@@ -13,8 +13,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     EditText enterText;
-    Button button1;
-    Button button2;
+    Button btnGreetFirstName;
+    Button btnGreetFullName;
     TextView text;
 
     @Override
@@ -23,29 +23,29 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         enterText = findViewById(R.id.enterText);
-        button1 = findViewById(R.id.activity2);
-        button2 = findViewById(R.id.activity3);
+        btnGreetFirstName = findViewById(R.id.activity2);
+        btnGreetFullName = findViewById(R.id.activity3);
         text = findViewById(R.id.output);
 
-        button1.setOnClickListener(new View.OnClickListener() {
+        btnGreetFirstName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String firstName = enterText.getText().toString().trim();
                 if (firstName.isEmpty()) {
                     Toast.makeText(MainActivity.this, "Please enter your name", Toast.LENGTH_SHORT).show();
                 } else {
-                    Intent intent = new Intent(MainActivity.this, com.thehtmlprogrammer.explicitintentspractice.activity2.class);
+                    Intent intent = new Intent(MainActivity.this, activity2.class);
                     intent.putExtra("name", firstName);
                     startActivity(intent);
                 }
             }
         });
 
-        button2.setOnClickListener(new View.OnClickListener() {
+        btnGreetFullName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 int requestCode = 0;
-                Intent intentAct3 = new Intent(MainActivity.this, com.thehtmlprogrammer.explicitintentspractice.activity3.class);
+                Intent intentAct3 = new Intent(MainActivity.this, activity3.class);
                 startActivityForResult(intentAct3, requestCode);
             }
         });

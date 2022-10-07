@@ -1,28 +1,24 @@
 package com.thehtmlprogrammer.fragments;
 
-import android.content.ClipData;
 import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.ListFragment;
 
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import java.util.ArrayList;
+import java.util.Objects;
 
 
 public class ListFrag extends ListFragment {
 
-    ArrayList<String> data;
-    ItemClick activity;
-    public interface ItemClick {
+    String [] data;
+    onItemClick activity;
+    public interface onItemClick {
         void onListClick(int idx);
     }
 
@@ -34,22 +30,22 @@ public class ListFrag extends ListFragment {
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
 
-        activity = (ItemClick) context;
+        activity = (onItemClick) context;
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        data = new ArrayList<>();
-
-        data.add("1. First data");
-        data.add("2. Second data");
-        data.add("3. Third data");
-        data.add("4. Fourth data");
-        data.add("5. Fifth data");
+        data = getResources().getStringArray(R.array.pieces);
 
         setListAdapter(new ArrayAdapter<>(getActivity(), android.R.layout.simple_list_item_1, data));
+
+        activity.onListClick(0);
+//        // if phone is in landscape mode
+//        if (this.getActivity().findViewById(R.id.layout_land) != null) {
+//            activity.onListClick(0);
+//        }
     }
 
     @Override
