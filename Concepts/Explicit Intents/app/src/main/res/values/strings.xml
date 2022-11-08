@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ExplicitIntentsPractice</string>
+    <string name="numberInput">Enter your first name</string>
+    <string name="button1">Welcome with First Name</string>
+    <string name="button2">Welcome with Full Name</string>
+    <string name="textView"> </string>
+    <string name="activity2MainText">Welcome</string>
+    <string name="act3input">Enter your surname</string>
+    <string name="act3button">SUBMIT</string>
+    <string name="act1output">Welcome</string>
+    <string name="act3cancel">Cancel</string>
+    <string name="act2return">Back</string>
+</resources>

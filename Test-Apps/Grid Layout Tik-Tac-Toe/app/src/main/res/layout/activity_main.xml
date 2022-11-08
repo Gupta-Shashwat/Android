@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:minHeight="150dp"
+        android:minWidth="150dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn1"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:width="50dp"
+            android:height="50dp"
+            />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn2"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:width="50dp"
+            android:height="50dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn3"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:width="50dp"
+            android:height="50dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn4"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:width="50dp"
+            android:height="50dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn5"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:width="50dp"
+            android:height="50dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn6"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:width="50dp"
+            android:height="50dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn7"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:width="50dp"
+            android:height="50dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn8"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:width="50dp"
+            android:height="50dp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn9"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:width="50dp"
+            android:height="50dp"/>
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/tvResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:gravity="center"
+        android:text="@string/tv_text"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRestart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:gravity="center"
+        android:text="@string/btn_restart"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

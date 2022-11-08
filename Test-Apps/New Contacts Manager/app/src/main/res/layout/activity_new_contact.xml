@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewContactActivity"
+    android:orientation="vertical"
+    android:background="@color/colorPrimaryLight">
+
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="@string/new_contact_name_hint"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/etPhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="@string/new_contact_phone_hint"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/etWebsite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="@string/new_contact_website_hint"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        tools:ignore="TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/etLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:hint="@string/new_contact_address_hint"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        tools:ignore="TextContrastCheck" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="0"
+        android:orientation="horizontal"
+        tools:ignore="InefficientWeight">
+
+        <ImageView
+            android:id="@+id/satisfied"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="@string/satisfied"
+            android:focusable="true"
+            app:srcCompat="@drawable/satisfied"
+            tools:ignore="NestedWeights,SpeakableTextPresentCheck,ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/neutral"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:contentDescription="@string/neutral"
+            android:focusable="true"
+            app:srcCompat="@drawable/neutral"
+            tools:ignore="SpeakableTextPresentCheck,ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/dissatisfied"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            app:srcCompat="@drawable/dissatisfied"
+            tools:ignore="SpeakableTextPresentCheck"
+            android:focusable="true"
+            android:contentDescription="@string/dissatisfied" />
+    </LinearLayout>
+
+</LinearLayout>
